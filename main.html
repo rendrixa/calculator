@@ -1,97 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculator</title>
-  <style>
-    .container {
-      justify-content: center;
-      display: flex;
-      /* align-items: center; */
-    }
-    .box {
-      justify-content: center;
-      text-align: center;
-      width: 300px;
-      /* position: relative; */
-      align-items: center;
-      border: 4px ridge rgb(53, 104, 243);
-      /* margin-right: 30px; */
-      background-color: rgb(255, 254, 254);
-    }
-    .text-box {
-      border: 1px solid blue;
-      margin-top: 10px;
-    }
-    .menu-button {
-      width: 40px;
-      margin-top: 10px;
-      background-color: white;
-      border: 1px solid blue;
-      border-radius: 5px;
-      color: blue;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="calculator">
+      <input type="text" class="numtxt" id="input" />
 
-    hr {
-      width: 200px;
-      border: 1px solid blue;
-    }
+      <button class="numBtn" value="1">1</button>
+      <button class="numBtn" value="2">2</button>
+      <button class="numBtn" value="3">3</button>
 
-    .text-box-sum {
-      margin-bottom: 10px;
-      border: none;
-      border-bottom: 3px;
-      text-align: end;
-      color: blue;
-    }
-  </style>
+      <button class="numBtn" value="4">4</button>
+      <button class="numBtn" value="5">5</button>
+      <button class="numBtn" value="6">6</button>
 
-</head>
-<body>
-  <div class="container">
-    <div class="box">
-      <input type="text" id="num1" class="text-box">
-      <input type="checkbox" id="check">
-      <br>
-      <input type="text" id="num2" class="text-box">
-      <input type="checkbox" id="check">
-      <br>
-      <input type="text" id="num3" class="text-box">
-      <input type="checkbox" id="check">
-      <br>
-      <button class="menu-button" onclick="bTambah()">+</button>
-      <button class="menu-button" onclick="bKurang()">-</button>
-      <button class="menu-button" onclick="bKali()">*</button>
-      <button class="menu-button" onclick="bBagi()">/</button>
-      <br>
-      <hr>
-      <label style="color: blue;">Hasil </label><input type="text" id="sum" class="text-box-sum">
+      <button class="numBtn" value="7">7</button>
+      <button class="numBtn" value="8">8</button>
+      <button class="numBtn" value="9">9</button>
+      <button class="numBtn" value="0">0</button>
+      <button class="opBtn" value="*">*</button>
+      <button class="opBtn" value="/">/</button>
+      <button class="opBtn" value="+">+</button>
+
+      <button class="opBtn" value="-">-</button>
+      <button class="clrBtn" value="c">C</button>
+      <button class="calBtn" value="=">=</button>
     </div>
-  </div>
 
-  <script>
-
-    var num1 = document.getElementById("num1");
-    var num2 = document.getElementById("num2");
-    var num3 = document.getElementById("num3");
-    var sum = document.getElementById("sum");
-
-      function bTambah(){
-        sum.value = Number(num1.value) + Number(num2.value) + Number(num3.value);
-      }
-      function bKurang(){
-        sum.value = Number(num1.value) - Number(num2.value) - Number(num3.value);
-      }
-      function bKali(){
-        sum.value = Number(num1.value) * Number(num2.value) * Number(num3.value);
-      }
-      function bBagi(){
-        sum.value = Number(num1.value) / Number(num2.value) / Number(num3.value);
-      }
-
-
-  </script>
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/script.js"></script>
+  </body>
 </html>
